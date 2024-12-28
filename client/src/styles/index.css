@@ -1,3 +1,43 @@
+/* Google Fonts: [Inter,Montserrat, Playfair Display, Poppins, Roboto]  */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  * {
+    @apply box-border m-0 p-0;
+  }
+  body {
+    @apply flex flex-col h-screen m-0 mx-auto p-0 font-montserrat;
+  }
+}
+
+@layer components {
+  .navbar {
+    @apply w-full flex justify-between items-center py-4 px-[8%];
+  }
+
+  .navbar ul {
+    padding: 10px 30px;
+    border-radius: 30px;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
+  }
+  .navbar ul li {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 0 10px;
+  }
+
+  a:hover {
+    @apply text-primary;
+  }
+}
+.MuiBadge-badge {
+  background-color: #ff5252 !important;
+}
+
+.MuiBadge-root:hover {
+  color: #ff5252;
+}
